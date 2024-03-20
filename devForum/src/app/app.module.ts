@@ -15,6 +15,9 @@ import { AddThemeComponent } from './theme/add-theme/add-theme.component'
 import { UserModule } from './user/user.module';
 import { ThemeModule } from './theme/theme.module';
 import { ErrorComponent } from './error/error.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './user/login/login.component';
+import { MaxCountDirective } from './max-count.directive';
 
 
 @NgModule({
@@ -27,6 +30,8 @@ import { ErrorComponent } from './error/error.component';
     HomeComponent,
     AddThemeComponent,
     ErrorComponent,
+    MaxCountDirective,
+   
     
   ],
   imports: [
@@ -35,7 +40,10 @@ import { ErrorComponent } from './error/error.component';
     SharedModule,
     HttpClientModule,
     UserModule,
-    ThemeModule, AppRoutingModule,
+    ThemeModule, 
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
